@@ -43,15 +43,6 @@ public class TrainService {
         return trainRepository.save(train).getTrainId();
     }
 
-//    private String getRoute(List<Station> stationRoute) {
-//        StringBuilder sb = new StringBuilder();
-//        for( Station s : stationRoute ){
-//            sb.append(s);
-//            sb.append(",");
-//        }
-//        return sb.toString();
-//    }
-
     public Integer calculateAvailableSeats(SeatAvailabilityEntryDto seatAvailabilityEntryDto){
 
         //Calculate the total seats available
@@ -122,7 +113,7 @@ public class TrainService {
         return noOfPassengers;
     }
 
-    public Integer calculateOldestPersonTravelling(Integer trainId) throws Exception{
+    public Integer calculateOldestPersonTravelling(Integer trainId){
 
         Train train = trainRepository.findById(trainId).get();
         int age = Integer.MIN_VALUE;
