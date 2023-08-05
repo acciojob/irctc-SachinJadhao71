@@ -43,16 +43,16 @@ public class TrainService {
         return trainRepository.save(train).getTrainId();
     }
 
-    private String getRoute(List<Station> stationRoute) {
-        StringBuilder sb = new StringBuilder();
-        for( Station s : stationRoute ){
-            sb.append(s);
-            sb.append(",");
-        }
-        return sb.toString();
-    }
+//    private String getRoute(List<Station> stationRoute) {
+//        StringBuilder sb = new StringBuilder();
+//        for( Station s : stationRoute ){
+//            sb.append(s);
+//            sb.append(",");
+//        }
+//        return sb.toString();
+//    }
 
-    public Integer calculateAvailableSeats(SeatAvailabilityEntryDto seatAvailabilityEntryDto) throws Exception{
+    public Integer calculateAvailableSeats(SeatAvailabilityEntryDto seatAvailabilityEntryDto){
 
         //Calculate the total seats available
         //Suppose the route is A B C D
